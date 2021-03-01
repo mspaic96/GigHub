@@ -177,8 +177,26 @@
     <Compile Include="Migrations\202103011327491_InitialModel.Designer.cs">
       <DependentUpon>202103011327491_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202103011401282_CreateGigTable.cs" />
+    <Compile Include="Migrations\202103011401282_CreateGigTable.Designer.cs">
+      <DependentUpon>202103011401282_CreateGigTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103012042148_OverrideConventionForGigsAndGenres.cs" />
+    <Compile Include="Migrations\202103012042148_OverrideConventionForGigsAndGenres.Designer.cs">
+      <DependentUpon>202103012042148_OverrideConventionForGigsAndGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103012045379_GenreRequiredInGig.cs" />
+    <Compile Include="Migrations\202103012045379_GenreRequiredInGig.Designer.cs">
+      <DependentUpon>202103012045379_GenreRequiredInGig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103012057485_PopulateGenresTable.cs" />
+    <Compile Include="Migrations\202103012057485_PopulateGenresTable.Designer.cs">
+      <DependentUpon>202103012057485_PopulateGenresTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\Gig.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -260,6 +278,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202103011327491_InitialModel.resx">
       <DependentUpon>202103011327491_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103011401282_CreateGigTable.resx">
+      <DependentUpon>202103011401282_CreateGigTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103012042148_OverrideConventionForGigsAndGenres.resx">
+      <DependentUpon>202103012042148_OverrideConventionForGigsAndGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103012045379_GenreRequiredInGig.resx">
+      <DependentUpon>202103012045379_GenreRequiredInGig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103012057485_PopulateGenresTable.resx">
+      <DependentUpon>202103012057485_PopulateGenresTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
