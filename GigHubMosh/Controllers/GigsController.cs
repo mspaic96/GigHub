@@ -1,7 +1,6 @@
 ﻿using GigHubMosh.Models;
 using GigHubMosh.ViewModels;
 using Microsoft.AspNet.Identity;
-using System;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -37,7 +36,7 @@ namespace GigHubMosh.Controllers
             var gig = new Gig
             {
                 ArtistId = User.Identity.GetUserId(),
-                DateTime = DateTime.Parse(string.Format("{0} {1}", gigFormViewModel.Date, gigFormViewModel.Time)),
+                DateTime = gigFormViewModel.DateTime),
                 GenreId = gigFormViewModel.Genre,
                 Venue = gigFormViewModel.Venue
             };
