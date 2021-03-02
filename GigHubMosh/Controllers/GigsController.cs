@@ -30,13 +30,17 @@ namespace GigHubMosh.Controllers
         [HttpPost]
         public ActionResult Create(GigFormViewModel gigFormViewModel)
         {
-            
-            
+
+            if (!ModelState.IsValid)
+            {
+                gigFormViewModel.Genres = _context.Genres.ToList();
+                return View("Create", gigFormViewModel);
+            }
 
             var gig = new Gig
             {
                 ArtistId = User.Identity.GetUserId(),
-                DateTime = gigFormViewModel.DateTime),
+                DateTime = gigFormViewModel.GetDateTime(),
                 GenreId = gigFormViewModel.Genre,
                 Venue = gigFormViewModel.Venue
             };
