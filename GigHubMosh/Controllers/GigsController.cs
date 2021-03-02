@@ -1,5 +1,7 @@
 ﻿using GigHubMosh.Models;
 using GigHubMosh.ViewModels;
+using Microsoft.AspNet.Identity;
+using System;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -14,6 +16,8 @@ namespace GigHubMosh.Controllers
         {
             _context = new ApplicationDbContext();
         }
+
+        [Authorize]
         public ActionResult Create()
         {
             var viewModel = new GigFormViewModel
@@ -22,6 +26,26 @@ namespace GigHubMosh.Controllers
             };
 
             return View(viewModel);
+        }
+        [Authorize]
+        [HttpPost]
+        public ActionResult Create(GigFormViewModel gigFormViewModel)
+        {
+            
+            
+
+            var gig = new Gig
+            {
+                ArtistId = User.Identity.GetUserId(),
+                DateTime = DateTime.Parse(string.Format("{0} {1}", gigFormViewModel.Date, gigFormViewModel.Time)),
+                GenreId = gigFormViewModel.Genre,
+                Venue = gigFormViewModel.Venue
+            };
+
+            _context.Gigs.Add(gig);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index","Home");
         }
     }
 }

@@ -10,7 +10,7 @@ namespace GigHubMosh.ViewModels
 
         public string Time  { get; set; }
 
-        public int Genre { get; set; }
+        public byte Genre { get; set; }
 
 
         public IEnumerable<Genre> Genres { get; set; }
