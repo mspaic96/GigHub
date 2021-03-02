@@ -9,7 +9,7 @@ namespace GigHubMosh.Controllers
     public class GigsController : Controller
     {
         private readonly ApplicationDbContext _context;
-        
+
 
         public GigsController()
         {
@@ -28,6 +28,7 @@ namespace GigHubMosh.Controllers
         }
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(GigFormViewModel gigFormViewModel)
         {
 
