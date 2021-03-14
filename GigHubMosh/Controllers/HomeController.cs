@@ -17,10 +17,12 @@ namespace GigHubMosh.Controllers
         {
             _context = new ApplicationDbContext();
         }
+        [Authorize]
         public ActionResult Index()
         {
             var upcomingsGigs = _context.Gigs
                 .Include(g => g.Artist)
+                .Include(g => g.Genre)
                 .Where(g => g.DateTime > DateTime.Now);
             return View(upcomingsGigs);
         }
