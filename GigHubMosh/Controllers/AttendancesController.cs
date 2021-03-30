@@ -16,7 +16,7 @@ namespace GigHubMosh.Controllers
             _context = new ApplicationDbContext();
         }
         [HttpPost]
-        public IHttpActionResult Attend( AttendanceDto dto)
+        public IHttpActionResult Attend(AttendanceDto dto)
         {
             var userId = User.Identity.GetUserId();
             if (_context.Attendances.Any(a => a.AttendeeId == userId && a.GigId == dto.GigId))

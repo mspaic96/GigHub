@@ -1,4 +1,5 @@
 ﻿using GigHubMosh.Models;
+using GigHubMosh.ViewModels;
 using System;
 using System.Data.Entity;
 using System.Linq;
@@ -17,14 +18,22 @@ namespace GigHubMosh.Controllers
         {
             _context = new ApplicationDbContext();
         }
-        [Authorize]
+        
         public ActionResult Index()
         {
             var upcomingsGigs = _context.Gigs
                 .Include(g => g.Artist)
                 .Include(g => g.Genre)
                 .Where(g => g.DateTime > DateTime.Now);
-            return View(upcomingsGigs);
+
+            var viewModel = new GigsViewModel
+            {
+                UpcomingGigs = upcomingsGigs,
+                ShowActions = User.Identity.IsAuthenticated,
+                Heading = "Upcoming gigs"
+            };
+
+            return View(viewModel);
         }
 
         public ActionResult About()

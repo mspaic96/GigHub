@@ -173,10 +173,12 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AttendancesController.cs" />
+    <Compile Include="Controllers\FollowingsController.cs" />
     <Compile Include="Controllers\GigsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Dtos\AttendanceDto.cs" />
+    <Compile Include="Dtos\FollowingDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -212,9 +214,14 @@
     <Compile Include="Migrations\202103141443266_AddAttendance!.Designer.cs">
       <DependentUpon>202103141443266_AddAttendance!.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202103152000094_AddFollowings!.cs" />
+    <Compile Include="Migrations\202103152000094_AddFollowings!.Designer.cs">
+      <DependentUpon>202103152000094_AddFollowings!.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Attendance.cs" />
+    <Compile Include="Models\Following.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Gig.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -223,6 +230,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\FutureDate.cs" />
     <Compile Include="ViewModels\GigFormViewModel.cs" />
+    <Compile Include="ViewModels\GigsViewModel.cs" />
     <Compile Include="ViewModels\RegisterViewModel.cs" />
     <Compile Include="ViewModels\ValidTime.cs" />
   </ItemGroup>
@@ -291,6 +299,8 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Gigs\Create.cshtml" />
+    <Content Include="Views\Shared\Gigs.cshtml" />
+    <Content Include="Views\Gigs\Mine.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -319,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202103141443266_AddAttendance!.resx">
       <DependentUpon>202103141443266_AddAttendance!.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103152000094_AddFollowings!.resx">
+      <DependentUpon>202103152000094_AddFollowings!.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
