@@ -1,10 +1,10 @@
-﻿using GigHubMosh.Dtos;
+﻿using System.Linq;
+using System.Web.Http;
+using GigHubMosh.Dtos;
 using GigHubMosh.Models;
 using Microsoft.AspNet.Identity;
-using System.Linq;
-using System.Web.Http;
 
-namespace GigHubMosh.Controllers
+namespace GigHubMosh.Controllers.Api
 {
     [Authorize]
     public class AttendancesController : ApiController
