@@ -1,3 +1,4 @@
+using GigHubMosh.App_Start;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
@@ -9,6 +10,7 @@ namespace GigHubMosh
     {
         protected void Application_Start()
         {
+            AutoMap.RegisterMappings();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
