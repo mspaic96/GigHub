@@ -133,5 +133,10 @@ namespace GigHubMosh.Controllers
 
             return RedirectToAction("Mine", "Gigs");
         }
+        [HttpPost]
+        public ActionResult Search(GigsViewModel gigsViewModel)
+        {
+            return RedirectToAction("Index", "Home", new {query = gigsViewModel.SearchTerm});
+        }
     }
 }
