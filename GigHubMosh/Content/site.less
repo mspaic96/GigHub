@@ -1,0 +1,199 @@
+﻿body {
+    padding-top: 90px;
+    padding-bottom: 20px;
+    font-family: Open Sans,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.dl-horizontal {
+    dt {
+        white-space: normal;
+    }
+}
+
+input {
+    max-width: 280px;
+}
+
+select {
+    max-width: 280px;
+}
+
+textarea {
+    max-width: 280px;
+}
+
+.field-validation-error {
+    color: red;
+    font-weight: bold;
+}
+
+.popover {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    font-family: Open Sans,"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.navbar-inverse {
+    background-color: #ff4342;
+    border-color: #ff4342;
+
+    .navbar-nav {
+        > li {
+            > a {
+                color: #ffffff;
+            }
+        }
+
+        > .open {
+            > a {
+                background-color: rgba(205,40,39,0.55);
+
+                &:hover {
+                    background-color: rgba(205,40,39,0.55);
+                }
+
+                &:focus {
+                    background-color: rgba(205,40,39,0.55);
+                }
+            }
+        }
+    }
+
+    .navbar-brand {
+        color: #ffffff;
+    }
+}
+
+.navbar-inverse.notifications {
+    position: relative;
+}
+
+.navbar-inverse.notifications.badge {
+    position: absolute;
+    top: 8px;
+    right: -1px;
+    background: #a80a0a;
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+.dropdown-menu {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.tooltip {
+    font-family: Open Sans,"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    font-size: 17px;
+    height: 44px;
+    border-radius: 9px;
+
+    &:focus {
+        border-color: #2196f3;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+}
+
+.btn {
+    border-radius: 9px;
+}
+
+.gigs {
+    list-style: none;
+
+    > li {
+        position: relative;
+        margin-bottom: 30px;
+
+        .date {
+            background: red;
+            color: white;
+            text-align: center;
+            width: 60px;
+            border-radius: 8px;
+
+            .month {
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: bold;
+                padding: 2px 6px;
+            }
+
+            .day {
+                background: #f7f7f7;
+                color: #333;
+                font-size: 20px;
+                padding: 6px 12px;
+            }
+        }
+
+        .details {
+            position: absolute;
+            top: 0;
+            left: 70px;
+
+            .artist {
+                font-weight: bold;
+                display: block;
+            }
+
+            .genre {
+                font-size: 15px;
+            }
+        }
+
+        .actions {
+            font-size: 15px;
+            display: none;
+        }
+
+        &:hover {
+            .actions {
+                display: block;
+            }
+        }
+    }
+}
+
+
+.popover-notifications {
+    .popover-content {
+        padding: 0;
+    }
+
+    ul.notifications {
+        list-style: none;
+        padding-left: 0;
+
+        > li {
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        > li:last-child {
+            border-bottom: none;
+        }
+
+        .highlight {
+            font-weight: bold;
+        }
+    }
+}
+
+
